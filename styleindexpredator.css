@@ -1,0 +1,126 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 2fr)); /* Növeltem a minmax értéket */
+    gap: 20px; /* Növeltem a gap-et a jobb elrendezés érdekében */
+    padding: 10px;
+}
+
+.gallery-item {
+    width: 100%;
+    padding-top: 75%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+.background-container {
+    position: relative;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url('image/predatorwallpaper.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.back {
+    text-align: left;
+    margin: auto;
+    padding: 20px;
+}
+
+.back a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    background-color: #555;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.back a:hover {
+    background-color: #777;
+}
+
+h1 {
+    color: blue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 30px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #b8c6db, #f5f7fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.7);
+    display: inline-block;
+    text-align: center;
+    margin: auto;
+}
+
+.video-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Dinamikusan alkalmazkodik a képernyő méretéhez */
+    gap: 20px; /* Térköz a videók között */
+    padding: 5px;
+}
+
+.video-item {
+    overflow: hidden;
+    border-radius: 10px; /* Borderek lekerekítése a videók körül */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Árnyék a videók körül */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animáció az átméretezéshez és árnyékhoz */
+}
+
+.video-item iframe {
+    width: 100%;
+    height: 200px; /* Magasság beállítása */
+    border: none; /* Az iframe keretének eltávolítása */
+}
+
+.video-item:hover {
+    transform: scale(1.05); /* Kiemelkedés az egér fölé húzáskor */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Árnyék növelése */
+}

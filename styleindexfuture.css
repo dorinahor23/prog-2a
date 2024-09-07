@@ -1,0 +1,103 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url('image/Games.jpg') no-repeat center center fixed;
+    background-size: cover; /* A kép lefedi az egész oldalt */
+    font-family: Arial, sans-serif;
+    color: white; /* Szöveg színe fehér, hogy jól látszódjon a sötét háttéren */
+    /* opacity: 0.7;*/
+    background-size: cover; /* Lefedi az egész oldalt */
+    overflow: scroll; /* Görgetés engedélyezve */
+    padding: 60px;
+}
+/* 
+.background-container {
+    position: relative; /* Biztosítja, hogy az overlay jól működjön 
+    height: 100vh; /* Az elem magassága legyen a teljes böngészőablak magassága 
+    margin: 20px;
+    padding: 0;
+}
+*/
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(103, 101, 101, 0); /* Átlátszó réteg a halványításhoz */
+    padding: 20px; /* Padding hozzáadása a cím és a gomb köré */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Cím és gomb bal oldalon igazítva */
+    gap: 5px;
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 50px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #db9d52d7, #c84e1ecb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 2px 3px rgba(3, 2, 2, 0.726);
+    display: inline-block;
+    text-align: left; /* Cím balra igazítva */
+    margin: 10px;
+    margin-bottom: -50px; /* Csökkentsd ezt az értéket */
+}
+
+table {
+    width: 90%;
+    border-collapse: collapse;
+    background-color: rgba(91, 76, 53, 0.791); /* Táblázat háttér színének átlátszósága */
+    border-radius: 8px;
+    position: relative;
+    bottom: -100px;
+    margin: auto;
+    z-index: 3; /* Táblázat a háttér réteg fölött */
+}
+
+table, th, td {
+    border: 1px solid rgba(0, 0, 0, 0.698);
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+th {
+    background-color: rgba(223, 139, 13, 0.447);
+}
+
+tr:nth-child(even) {
+    background-color: rgba(192, 190, 72, 0.35);
+}
+
+
+
+.back {
+    text-align: left;
+    margin: 120px;
+    margin-bottom: 50px;
+    margin-left: 68px;
+}
+
+.back a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    background-color: #df884967;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.back a:hover {
+    background-color: #040303;
+}

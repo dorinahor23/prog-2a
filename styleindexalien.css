@@ -1,0 +1,131 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.background-container {
+    position: relative;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url('image/alienwallpaper.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Az overflow beállítása hidden, hogy ne legyen scroll bar a háttér miatt */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto; /* Engedélyezze a függőleges görgetést */
+}
+
+.alien-info {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    margin: 0 0 20px;
+}
+
+ul {
+    list-style-type: disc;
+    margin: 0 0 20px 20px;
+    padding: 0;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 10px;
+}
+
+.gallery-item {
+    width: 100%;
+    padding-top: 75%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+.video-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Dinamikusan alkalmazkodik a képernyő szélességéhez */
+    gap: 20px; /* Térköz a videók között */
+    margin: 20px 0;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 200px; /* Magasság beállítása */
+    border-radius: 8px;
+}
+.video-container iframe:hover {
+    transform: scale(1.05); /* Kiemelkedés */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); /* Árnyék */
+}
+
+
+.back {
+    text-align: left;
+    margin: auto;
+}
+
+.back a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    background-color: #555;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.back a:hover {
+    background-color: #777;
+}
+
+h1 {
+    color: blue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 30px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #b8c6db, #f5f7fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.7);
+    display: inline-block;
+    text-align: center;
+}
